@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Encuentra tu SuperHero</title>
+
+    <!-- Styles -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/favicon.ico">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/sh2.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                SuperHero
+            </a>
+
+            <form id="buscarHeroAlt" class="d-flex">
+                <input id="heroIDAlt" class="form-control me-2" type="number" placeholder="ID" required min="1"
+                    max="9999">
+                <button class="btn btn-primary me-2" type="submit">Buscar</button>
+                <!-- <a class="btn btn-secondary" type="submit">Aleatoreo!</a> -->
+            </form>
+        </div>
+    </nav>
+
+    <div id="main" class="container">
+
+        <section class="main-form py-4">
+            <div class="row justify-content-md-center">
+                <div class="col-4">
+                    <img src="assets/img/sh1.jpg" alt="Logo" class="rounded img-fluid">
+                </div>
+                <div class="col-4">
+                    <form id="buscarHero">
+                        <div class="mb-3">
+                            <label for="heroID" class="form-label display-6">Ingresa el número
+                                del<br />SuperHero</label>
+                            <input type="number" class="form-control form-control-lg" id="heroID" required min="1"
+                                max="9999">
+                            <div id="emailHelp" class="form-text">Debe ser un número entero mayor a 0.</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="error-info py-4">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h4>Ops... no encontramos un héroe con ese ID, por favor haz otro intento!</h4>
+                </div>
+            </div>
+        </section>
+
+        <section class="loading-info py-4">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h4>Buscando...</h4>
+                </div>
+            </div>
+        </section>
+
+        <section class="hero py-4">
+            <div class="row">
+
+                <h2 id="hero-titulo" class="card-title text-uppercase text-center"></h2>
+
+                <div class="col-3">
+                    <div id="hero-imagen" class=""></div>
+                </div>
+
+                <div class="col-6">
+
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Biografía</h5>
+                            <ul id="hero-biografia" class="list-group list-group-flush mb-3"></ul>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Estadísticas de Poder</h5>
+                            <p class="card-text">
+                            <div id="hero-grafico"></div>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Conexiones</h5>
+                            <ul id="hero-conexiones" class="list-group list-group-flush mb-3"></ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-3">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title text-uppercase2">Apariencia</h5>
+                            <ul id="hero-apariencia" class="list-group list-group-flush"></ul>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Trabajo</h5>
+                            <ul id="hero-trabajo" class="list-group list-group-flush mb-3"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="text-center py-3">
+        <p>
+            &copy;2022 - Gerson - Todos los derechos reservados.
+        </p>
+    </footer>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/jquery.canvasjs.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
